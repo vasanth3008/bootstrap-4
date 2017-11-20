@@ -768,7 +768,7 @@ var DateTimePicker = function ($) {
         };
 
         DateTimePicker.prototype._getLastPickedDate = function _getLastPickedDate() {
-            return this._dates[this._getLastPickedDateIndex()];
+            return this._dates[this._getLastPickedDateIndex()] ? this._dates[this._getLastPickedDateIndex()]:moment(new Date());
         };
 
         DateTimePicker.prototype._getLastPickedDateIndex = function _getLastPickedDateIndex() {
